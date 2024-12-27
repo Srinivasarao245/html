@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        :root{--bg:#F8F8FF}
+        body{
+            background: var(--bg);
+            display: grid;
+            place-items: center;
+            height: 100vh;
+        }
+        .gallery{
+            display:flex;
+            gap:0rem;
+            max-width:80rem;
+        }
+        .card{
+            position: relative;
+            left:0;
+            width:5rem;
+            border-radius:1.2rem;
+            height:20rem;
+            overflow:hidden;
+            cursor:pointer;
+            background:var(--bg);
+            transition:0.4s ease-in-out;
+            box-shadow:0 5px 12px #0000004d;
+            flex:0.25;
+        }
+        .card img{
+            position:relative;
+            height:20rem;
+            object-fit:cover;
+        }
+        .card:hover{
+            flex:6;
+            font-weight:bold;
+            cursor:pointer;
+            border-radius:1rem;
+        }
+        .card:nth-child(1) img{ left:auto;right: 0rem; }
+        .card:nth-child(2) img{ left:0rem;right: 0rem; }
+        .card:nth-child(3) img{ left:-1rem;right: 1rem; }
+        .card:nth-child(4) img{ left: 0rem;right: 0rem; }
+        .card:nth-child(5) img{ left: 0rem;right: 0rem; }
+        .card:nth-child(6) img{ left: 0rem;right: 0rem; }
+
+        .loader:after { 
+            content: "";
+            font-weight: 600;
+            font-size: 115px;
+            color: rgb(60, 196, 14);
+            animation-name: animatingtext;
+            animation-duration: 1200ms;
+            animation-iteration-count: infinite;
+        }
+        @keyframes animatingtext{
+            0%{content: 'L';}
+            10%{content: 'Lo';}
+            20%{content: 'Loa';}
+            30%{content: 'Load';}
+            40%{content: 'Loadi';color: chartreuse;}
+            50%{content: 'Loadin';}
+            50%{content: 'Loadin';}
+            60%{content: 'Loading';color: chocolate;}
+            70%{content: 'Loading.';}
+            80%{content: 'Loading..';}
+            90%{content: 'Loading...';}
+            100%{content: 'Loading....';}
+        }
+    </style>
+</head>
+<body>
+    <div class="loader"></div>
+    <div class="gallery">
+        <figure class="card">
+            <img src="https://cdn.securem2.com/commonimages/business/24573/2022/9/topbedroom-display3.JPG" alt="lakeview elegance preview">
+        </figure>
+        <figure class="card">
+            <img src="https://media.placester.com/image/upload/c_fill,q_80,w_1920/v1/inception-app-prod/MTU1MjhmM2EtYzg0Ny00MjQyLWIyMWMtNDBmN2QzZTM2Y2Y3/content/2023/12/2d00f839b05f16e1f86c0b68bf70829c34c60509.jpg" alt="lakeview elegance preview">
+        </figure>
+        <figure class="card">
+            <img src="https://images.squarespace-cdn.com/content/v1/62c4875434b0601699831f04/d09013b5-2e1b-4060-9182-bf31de00ef37/living+room.jpg" alt="lakeview elegance preview">
+        </figure>
+        <figure class="card">
+            <img src="https://th.bing.com/th/id/R.3ed5db832fdbb92d54a4abb65fe5d1ab?rik=u%2b55whVqwK%2fHDg&riu=http%3a%2f%2fwww.hauteresidence.com%2fwp-content%2fuploads%2f2018%2f06%2f122_1064_Lakeview_Canyon-_Road_preview.jpeg&ehk=FIWBuybvOtU4SprNFmd9suSuLphTZHLLE8Lq5uCVACw%3d&risl=&pid=ImgRaw&r=0" alt="lakeview elegance preview">
+        </figure>
+        <figure class="card">
+            <img src="https://concoursofelegancegermany.com/wp-content/uploads/GutKaltenbrunn-Lakeview-photography-credit-Thorsten-Jochim.jpg" alt="lakeview elegance preview">
+        </figure>
+        <figure class="card">
+            <img src="https://chistockimages.com/wp-content/uploads/edd/2023/07/LV-460-Lake-View-Chicago-preview.jpg" alt="lakeview elegance preview">
+        </figure>
+    </div>
+</body>
+</html>
