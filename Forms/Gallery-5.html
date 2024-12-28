@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+</head>
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        background-color: rgba(126, 126, 147, 0.822);
+        background:conic-gradient(from 45deg,red,yellow,lime,aqua,blue,magenta,red);
+    }
+    .slider{
+        display:flex;
+        justify-content:center;
+        gap:5px;
+    }
+    h1{
+        color:#fff;
+        font-family:Arial, Helvetica, sans-serif;
+        text-align:center;
+        margin:30px;
+    }
+    .slider div{
+        height:450px;
+        width:300px;
+        border:2px solid white;
+        border-radius:15px;
+        /* box-shadow:10px 10px 10px #ff6a00; */
+        animation-name:firstanimation;
+        animation-duration:0.4s;
+    }
+    @keyframes firstanimation{
+        from{background-color:green;}
+        to{background-color:orangered;}
+    }
+    .div1{
+        background-image:url(https://learnertrip.com/wp-content/uploads/2023/02/best-ai-generate-images.png);
+        background-position:center;
+        /* transition:0.4s ease-in-out; */
+        background-size:cover;
+    }
+    .div2{
+        background-image: url(https://live.staticflickr.com/4724/25039883267_5b3eaede33.jpg);
+        background-size:cover;
+        background-position:center;
+        /* transform:scaley(1.3); */
+        /* transition:0.5s ease; */
+        /* transform:rotate(240deg); */
+        /* transform:rotatex(900deg); */
+        /* transform:rotatey(180deg); */
+        /* transform: translate(40px,-10px); */
+        /* transform: translateX(50px); */
+        /* transform: translateY(-20px); */
+        /* transform: skew(10deg,20deg); */
+        /* transform: skewX(25deg); */
+    }
+    .div3{
+        background-image: url(https://live.staticflickr.com/4724/25039883267_5b3eaede33.jpg);
+        background-size:cover;
+        background-position:center; 
+    }
+    .div4{
+        background-image: url(https://live.staticflickr.com/4724/25039883267_5b3eaede33.jpg);
+        background-size:cover;
+        background-position:center; 
+    }
+    .div5{
+        background-image: url(https://live.staticflickr.com/4724/25039883267_5b3eaede33.jpg);
+        background-size:cover;
+        background-position:center; 
+    }
+
+</style>
+<body>
+    <h1>Image Slider using html&css</h1>
+    <div class="slider">
+        <div class="div1"></div>
+        <div class="div2"></div>
+        <div class="div3"></div>
+        <div class="div4"></div>
+        <div class="div5"></div>
+    </div>
+</body>
+</html>

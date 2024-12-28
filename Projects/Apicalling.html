@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="a1"></div>
+    <script>
+        var a = new XMLHttpRequest();
+        a.open('GET','https://fakestoreapi.com/products')
+        a.send();
+        a.onloadend=()=>{
+            var prod=JSON.parse(a.response)
+            prod.forEach((pr)=>{
+                var nli=document.createElement('li');
+                nli.innerHTML=pr.title;
+                document.getElementById('a1').appendChild(nli)
+            })
+        }
+    </script>
+</body>
+</html>
